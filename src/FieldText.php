@@ -2,7 +2,17 @@
 
 namespace Adaptcms\FieldText;
 
+use Adaptcms\Base\Models\Package;
+
 class FieldText
 {
-    // Build wonderful things
+  /**
+  * On Install
+  *
+  * @return void
+  */
+  public function onInstall()
+  {
+    Package::syncPackageFolder(get_class());
+  }
 }
