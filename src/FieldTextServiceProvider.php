@@ -66,7 +66,7 @@ class FieldTextServiceProvider extends ServiceProvider
     $commands = [];
     foreach (glob(__DIR__ . '/Console/Commands/*.php') as $row) {
       // init class path
-      $classPath = '\\' . $vendorName . '\\' . $packageName . '\\Console\\Commands\\';
+      $classPath = '\\Adaptcms\\FieldText\\Console\\Commands\\';
 
       // class path with command file class name
       $commandFileClass = str_replace('.php', '', basename($row));
